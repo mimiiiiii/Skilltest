@@ -1,0 +1,42 @@
+@import "../../../sass/variables";
+
+.wrapper {
+  position: relative;
+  height: 4.5rem;
+  width: 25rem;
+  margin-bottom: 2rem;
+
+  
+  &[data-type="secondary"] {
+    background-image: linear-gradient(
+      to right,
+      $color-secondary,
+      $color-secondary-light
+      );
+      border-radius: 2.4rem;
+      color: $color-white;
+    }
+    &[data-type="primary"] {
+    background-color: $color-white;
+    color: $color-primary-dark;
+    }
+
+  .children {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    width: 98%;
+
+    input {
+      height: 2.1rem;
+      width: 22.5rem;
+      padding: 1rem;
+      border-radius: 2.4rem;
+      background-color: $color-white;
+    }
+  }
+}

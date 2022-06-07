@@ -1,0 +1,49 @@
+@import "../../../sass/variables";
+
+.button {
+  position: relative;
+  width: 6rem;
+  height: 2.5rem;
+  padding: 10px 20px 10px 20px;
+  color: $color-white;
+  background-image: linear-gradient(
+    to right,
+    $color-secondary,
+    $color-secondary-light
+  );
+  border-radius: 2.3rem;
+  transition: transform;
+
+  &:active {
+    animation: shrink 2s ease-out;
+  }
+
+  .label {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  @keyframes shrink {
+    0% {
+      transform: scale(1);
+    }
+
+    33% {
+      transform: scale(0.9);
+    }
+
+    50% {
+      transform: scale(0.8);
+    }
+
+    66% {
+      transform: scale(0.7);
+    }
+
+    100% {
+      transform: scale(0.6);
+    }
+  }
+}
